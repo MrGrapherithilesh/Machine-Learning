@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AAPL Stock Lens</title>
+  <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+  <main class="shell">
+    <section class="topbar" aria-label="project summary">
+      <div>
+        <p class="eyebrow">AIML finance lab</p>
+        <h1>AAPL Stock Lens</h1>
+      </div>
+      <div class="model-switch" role="group" aria-label="model selector">
+        <button class="model-button active" type="button" data-model="lstm">LSTM</button>
+        <button class="model-button" type="button" data-model="rnn">RNN</button>
+      </div>
+    </section>
+
+    <section class="board" aria-label="prediction dashboard">
+      <aside class="metrics-panel">
+        <div class="metric-block">
+          <span>RMSE</span>
+          <strong id="rmse">--</strong>
+        </div>
+        <div class="metric-block">
+          <span>MAE</span>
+          <strong id="mae">--</strong>
+        </div>
+        <div class="metric-block">
+          <span>MAPE</span>
+          <strong id="mape">--</strong>
+        </div>
+        <div class="metric-block">
+          <span>Direction</span>
+          <strong id="direction">--</strong>
+        </div>
+      </aside>
+
+      <section class="chart-panel">
+        <div class="chart-head">
+          <div>
+            <p id="source">loading source...</p>
+            <h2 id="latest">waiting for run output</h2>
+          </div>
+          <label class="toggle">
+            <input id="actual-toggle" type="checkbox" checked>
+            <span>actual</span>
+          </label>
+        </div>
+        <canvas id="price-chart" width="1180" height="560" aria-label="stock prediction chart"></canvas>
+        <div id="tooltip" class="tooltip" hidden></div>
+        <div class="range-row">
+          <label for="days-range">days</label>
+          <input id="days-range" type="range" min="30" max="140" value="110">
+          <output id="days-value" for="days-range">110</output>
+        </div>
+      </section>
+    </section>
+
+    <section class="bottom-grid" aria-label="latest model output">
+      <div class="signal-strip">
+        <span>latest close</span>
+        <strong id="last-close">--</strong>
+      </div>
+      <div class="signal-strip">
+        <span>model call</span>
+        <strong id="last-prediction">--</strong>
+      </div>
+      <div class="signal-strip">
+        <span>gap</span>
+        <strong id="gap">--</strong>
+      </div>
+      <div class="signal-strip">
+        <span>window</span>
+        <strong id="window">--</strong>
+      </div>
+    </section>
+
+    <section class="table-wrap" aria-label="recent predictions">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Actual</th>
+            <th>RNN</th>
+            <th>LSTM</th>
+          </tr>
+        </thead>
+        <tbody id="prediction-table"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="app.js?v=2"></script>
+</body>
+</html>

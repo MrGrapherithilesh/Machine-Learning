@@ -1,0 +1,12 @@
+test_experiment_writes_outputs (tests.test_experiment.ExperimentTests.test_experiment_writes_outputs) ... ok
+test_inverse_close_scaling (tests.test_features.FeatureTests.test_inverse_close_scaling) ... ok
+test_rsi_stays_inside_normal_bounds (tests.test_features.FeatureTests.test_rsi_stays_inside_normal_bounds) ... ok
+test_sequences_keep_expected_shape (tests.test_features.FeatureTests.test_sequences_keep_expected_shape) ... ok
+test_lstm_predicts_finite_values (tests.test_models.ModelTests.test_lstm_predicts_finite_values) ... ok
+test_model_outputs_are_not_identical (tests.test_models.ModelTests.test_model_outputs_are_not_identical) ... ok
+test_rnn_predicts_finite_values (tests.test_models.ModelTests.test_rnn_predicts_finite_values) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.089s
+
+OK

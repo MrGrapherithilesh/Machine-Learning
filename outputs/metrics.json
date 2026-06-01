@@ -1,0 +1,40 @@
+{
+  "symbol": "AAPL",
+  "source": "deterministic offline AAPL-like demo data",
+  "generated_at": "2026-06-01T08:28:27+00:00",
+  "rows": 620,
+  "window": 30,
+  "horizon": 1,
+  "feature_columns": [
+    "Close",
+    "Return",
+    "RSI",
+    "EMA_12",
+    "EMA_26",
+    "Volume_Change"
+  ],
+  "train_sequences": 471,
+  "test_sequences": 118,
+  "models": {
+    "rnn": {
+      "rmse": 1.9691,
+      "mae": 1.5579,
+      "mape": 0.7654,
+      "direction_accuracy": 37.61
+    },
+    "lstm": {
+      "rmse": 1.9853,
+      "mae": 1.5965,
+      "mape": 0.7855,
+      "direction_accuracy": 45.3
+    }
+  },
+  "latest": {
+    "date": "2026-05-29",
+    "actual_close": 206.05543381407077,
+    "rnn_prediction": 204.3366292337555,
+    "lstm_prediction": 202.91180657706016,
+    "lstm_gap": -3.1436,
+    "rnn_gap": -1.7188
+  }
+}

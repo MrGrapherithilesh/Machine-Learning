@@ -1,0 +1,20 @@
+[project]
+name = "stock-lens-aapl"
+version = "0.1.0"
+description = "AAPL stock prediction demo using RNN and LSTM style time-series models"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "pillow",
+]
+
+[project.optional-dependencies]
+full = [
+    "matplotlib",
+    "yfinance",
+    "tensorflow",
+]
+
+[tool.setuptools]
+packages = ["stock_lens"]

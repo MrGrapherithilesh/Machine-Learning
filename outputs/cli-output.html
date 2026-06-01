@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>model run output</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #070707;
+      color: #f7f2df;
+      font: 15px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      display: grid;
+      place-items: center;
+    }
+    main {
+      width: min(980px, calc(100vw - 48px));
+      border: 1px solid #4d462f;
+      border-radius: 8px;
+      background: #11100d;
+      box-shadow: 0 18px 80px #000;
+      overflow: hidden;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 22px;
+      border-bottom: 1px solid #332f22;
+      color: #ffd43b;
+      letter-spacing: 0;
+    }
+    pre {
+      margin: 0;
+      padding: 22px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header><strong>model run output</strong><span>captured run</span></header>
+    <pre>Stock Price Prediction using LSTM and RNN
+Symbol: AAPL
+Source: deterministic offline AAPL-like demo data
+Python: 3.12.13
+Rows: 620
+Window: 30
+Train sequences: 471
+Test sequences: 118
+
+RNN metrics:
+  RMSE: 1.9691
+  MAE: 1.5579
+  MAPE: 0.7654%
+  Direction accuracy: 37.61%
+
+LSTM metrics:
+  RMSE: 1.9853
+  MAE: 1.5965
+  MAPE: 0.7855%
+  Direction accuracy: 45.3%
+
+Latest actual close: 206.06
+Latest RNN prediction: 204.34
+Latest LSTM prediction: 202.91
+
+Generated files:
+  outputs/metrics.json
+  outputs/predictions.csv
+  outputs/prediction_plot.png
+</pre>
+  </main>
+</body>
+</html>
