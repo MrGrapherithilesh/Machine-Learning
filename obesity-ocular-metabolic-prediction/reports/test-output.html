@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Testing Phase Evidence</title>
+    <style>
+      :root {
+        color: #111111;
+        background: #F5F7FA;
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      body {
+        margin: 0;
+        padding: 32px;
+      }
+      main {
+        max-width: 980px;
+        margin: 0 auto;
+        background: #FFFFFF;
+        border: 1px solid #DDE4EC;
+        border-radius: 8px;
+        box-shadow: 0 10px 24px rgba(17, 24, 39, 0.08);
+        padding: 28px;
+      }
+      h1 {
+        margin: 0 0 6px;
+        color: #0F4C81;
+      }
+      p {
+        color: #555555;
+        margin-top: 0;
+      }
+      section {
+        border-top: 1px solid #DDE4EC;
+        padding-top: 18px;
+        margin-top: 18px;
+      }
+      h2 {
+        font-size: 18px;
+      }
+      pre {
+        white-space: pre-wrap;
+        background: #F8FAFC;
+        border: 1px solid #DDE4EC;
+        border-radius: 8px;
+        padding: 16px;
+        line-height: 1.55;
+      }
+      .pass {
+        display: inline-flex;
+        padding: 6px 10px;
+        border-radius: 999px;
+        color: #2E7D32;
+        background: rgba(46, 125, 50, 0.1);
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <span class="pass">Testing phase passed</span>
+      <h1>Validation Evidence</h1>
+      <p>Predictive Modeling of Obesity Prevalence from Ocular and Metabolic Biomarkers</p>
+      <section>
+        <h2>Model Training</h2>
+        <pre>Best model: Random Forest
+Logistic Regression: accuracy=0.7987 precision=0.8457 recall=0.7987 f1=0.8140 roc_auc=0.9577
+Random Forest: accuracy=0.8868 precision=0.8850 recall=0.8868 f1=0.8854 roc_auc=0.9676
+XGBoost: accuracy=0.8113 precision=0.7993 recall=0.8113 f1=0.8035 roc_auc=0.9566
+Gradient Boosting: accuracy=0.8428 precision=0.8448 recall=0.8428 f1=0.8437 roc_auc=0.9496</pre>
+      </section>
+      <section>
+        <h2>Automated Tests</h2>
+        <pre>Backend pytest: 5 passed
+Frontend Vitest: 1 test file passed, 1 test passed
+Frontend npm audit: found 0 vulnerabilities
+Frontend build: TypeScript and Vite production build passed</pre>
+      </section>
+    </main>
+  </body>
+</html>
