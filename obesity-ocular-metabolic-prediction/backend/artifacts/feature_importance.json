@@ -1,0 +1,152 @@
+[
+  {
+    "feature": "metabolic_load_score",
+    "importance": 0.181145557290521,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "bmi",
+    "importance": 0.17644937978316272,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "waist_circumference_cm",
+    "importance": 0.10214283837167719,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "weight_kg",
+    "importance": 0.08829549635049087,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "waist_height_ratio",
+    "importance": 0.06777365753625897,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "insulin_resistance_index",
+    "importance": 0.05017906585648469,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "fasting_glucose_mg_dl",
+    "importance": 0.031124212733833014,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "ocular_vascular_index",
+    "importance": 0.031038881128074944,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "triglycerides_mg_dl",
+    "importance": 0.030198355633708217,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "cholesterol_ratio",
+    "importance": 0.023178759700276608,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "systolic_bp",
+    "importance": 0.021279892810475872,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "arteriole_venule_ratio",
+    "importance": 0.02061372323151332,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "ocular_risk_score",
+    "importance": 0.016700953751848095,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "hdl_mg_dl",
+    "importance": 0.01605128013220402,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "height_cm",
+    "importance": 0.014531144929515056,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "ldl_mg_dl",
+    "importance": 0.01371188440793277,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "retinal_arteriole_diameter_um",
+    "importance": 0.01358750067618677,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "total_cholesterol_mg_dl",
+    "importance": 0.012973131508992361,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "pulse_pressure",
+    "importance": 0.012591007447824504,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "visual_acuity_score",
+    "importance": 0.011135628537621343,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "intraocular_pressure_mmhg",
+    "importance": 0.010570397229460477,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "macular_thickness_um",
+    "importance": 0.009799744305455554,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "hba1c_percent",
+    "importance": 0.00936573735047008,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "retinal_venule_diameter_um",
+    "importance": 0.009313700548298259,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "age",
+    "importance": 0.008252205802917478,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "cup_disc_ratio",
+    "importance": 0.008009761392417783,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "diastolic_bp",
+    "importance": 0.007775552325569627,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "gender_Female",
+    "importance": 0.0012676024860869622,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "gender_Male",
+    "importance": 0.0009429467407214375,
+    "method": "model feature importance fallback"
+  },
+  {
+    "feature": "gender_Other",
+    "importance": 4.742650617459337e-19,
+    "method": "model feature importance fallback"
+  }
+]
