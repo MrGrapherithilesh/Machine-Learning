@@ -1,0 +1,11 @@
+test_dataset_shape_and_balance (tests.test_dataset.DatasetTests.test_dataset_shape_and_balance) ... ok
+test_experiment_writes_artifacts (tests.test_experiment.ExperimentTests.test_experiment_writes_artifacts) ... ok
+test_convolution_keeps_image_size (tests.test_features.FeatureTests.test_convolution_keeps_image_size) ... ok
+test_feature_scaler_normalises_values (tests.test_features.FeatureTests.test_feature_scaler_normalises_values) ... ok
+test_grayscale_conversion (tests.test_features.FeatureTests.test_grayscale_conversion) ... ok
+test_tiny_vision_net_learns_generated_patterns (tests.test_model.ModelTests.test_tiny_vision_net_learns_generated_patterns) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 2.597s
+
+OK

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>vision unittest output</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #05070d;
+      color: #d9faff;
+      display: grid;
+      place-items: center;
+      font: 15px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    main {
+      width: min(1040px, calc(100vw - 44px));
+      border: 1px solid #00eaff;
+      border-radius: 8px;
+      background: #0d121c;
+      box-shadow: 0 0 40px rgba(0, 234, 255, 0.16), 0 0 70px rgba(255, 42, 170, 0.12);
+      overflow: hidden;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 18px 22px;
+      border-bottom: 1px solid #27384a;
+      color: #ffe040;
+    }
+    pre {
+      margin: 0;
+      padding: 22px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header><strong>vision unittest output</strong><span>captured run</span></header>
+    <pre>test_dataset_shape_and_balance (tests.test_dataset.DatasetTests.test_dataset_shape_and_balance) ... ok
+test_experiment_writes_artifacts (tests.test_experiment.ExperimentTests.test_experiment_writes_artifacts) ... ok
+test_convolution_keeps_image_size (tests.test_features.FeatureTests.test_convolution_keeps_image_size) ... ok
+test_feature_scaler_normalises_values (tests.test_features.FeatureTests.test_feature_scaler_normalises_values) ... ok
+test_grayscale_conversion (tests.test_features.FeatureTests.test_grayscale_conversion) ... ok
+test_tiny_vision_net_learns_generated_patterns (tests.test_model.ModelTests.test_tiny_vision_net_learns_generated_patterns) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 2.597s
+
+OK
+</pre>
+  </main>
+</body>
+</html>

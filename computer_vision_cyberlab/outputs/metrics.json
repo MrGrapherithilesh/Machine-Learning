@@ -1,0 +1,75 @@
+{
+  "project": "Deep Learning for Computer Vision using Python and MATLAB",
+  "generated_at": "2026-06-02T08:23:44+00:00",
+  "python": "3.12.13",
+  "samples": 360,
+  "train_samples": 270,
+  "test_samples": 90,
+  "image_size": [
+    40,
+    40,
+    3
+  ],
+  "labels": [
+    "neon_square",
+    "pulse_ring",
+    "diagonal_strike"
+  ],
+  "class_counts": {
+    "neon_square": 120,
+    "pulse_ring": 120,
+    "diagonal_strike": 120
+  },
+  "feature_count": 326,
+  "filters": [
+    "edge_x",
+    "edge_y",
+    "laplace",
+    "soft_blur",
+    "diagonal"
+  ],
+  "model": {
+    "name": "TinyVisionNet",
+    "hidden_units": 72,
+    "epochs": 90,
+    "final_train_accuracy": 1.0,
+    "final_train_loss": 0.025189
+  },
+  "test_report": {
+    "accuracy": 1.0,
+    "confusion_matrix": [
+      [
+        36,
+        0,
+        0
+      ],
+      [
+        0,
+        27,
+        0
+      ],
+      [
+        0,
+        0,
+        27
+      ]
+    ],
+    "per_class": {
+      "neon_square": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 36
+      },
+      "pulse_ring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 27
+      },
+      "diagonal_strike": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 27
+      }
+    }
+  }
+}

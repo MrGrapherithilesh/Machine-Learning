@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>vision model run</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #05070d;
+      color: #d9faff;
+      display: grid;
+      place-items: center;
+      font: 15px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    main {
+      width: min(1040px, calc(100vw - 44px));
+      border: 1px solid #00eaff;
+      border-radius: 8px;
+      background: #0d121c;
+      box-shadow: 0 0 40px rgba(0, 234, 255, 0.16), 0 0 70px rgba(255, 42, 170, 0.12);
+      overflow: hidden;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 18px 22px;
+      border-bottom: 1px solid #27384a;
+      color: #ffe040;
+    }
+    pre {
+      margin: 0;
+      padding: 22px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header><strong>vision model run</strong><span>captured run</span></header>
+    <pre>Deep Learning for Computer Vision using Python and MATLAB
+Python native run
+Python: 3.12.13
+Samples: 360
+Train samples: 270
+Test samples: 90
+Image size: 40x40x3
+Feature count: 326
+Model: TinyVisionNet hidden=72 epochs=90
+
+Test accuracy: 100.00%
+Final train accuracy: 100.00%
+Final train loss: 0.025189
+
+Class report:
+  neon_square: precision=1.00 recall=1.00 support=36
+  pulse_ring: precision=1.00 recall=1.00 support=27
+  diagonal_strike: precision=1.00 recall=1.00 support=27
+
+Generated files:
+  outputs/metrics.json
+  outputs/predictions.csv
+  outputs/training_curve.csv
+  outputs/sample_grid.png
+  outputs/confusion_matrix.png
+  outputs/training_curve.png
+  outputs/prediction_mosaic.png
+</pre>
+  </main>
+</body>
+</html>

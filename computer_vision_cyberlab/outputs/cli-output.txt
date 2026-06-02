@@ -1,0 +1,27 @@
+Deep Learning for Computer Vision using Python and MATLAB
+Python native run
+Python: 3.12.13
+Samples: 360
+Train samples: 270
+Test samples: 90
+Image size: 40x40x3
+Feature count: 326
+Model: TinyVisionNet hidden=72 epochs=90
+
+Test accuracy: 100.00%
+Final train accuracy: 100.00%
+Final train loss: 0.025189
+
+Class report:
+  neon_square: precision=1.00 recall=1.00 support=36
+  pulse_ring: precision=1.00 recall=1.00 support=27
+  diagonal_strike: precision=1.00 recall=1.00 support=27
+
+Generated files:
+  outputs/metrics.json
+  outputs/predictions.csv
+  outputs/training_curve.csv
+  outputs/sample_grid.png
+  outputs/confusion_matrix.png
+  outputs/training_curve.png
+  outputs/prediction_mosaic.png

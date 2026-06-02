@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cyber Vision Lab</title>
+  <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+  <main class="app-shell">
+    <nav class="rail" aria-label="dashboard views">
+      <button class="rail-button active" type="button" data-view="scan" title="Scan view">CV</button>
+      <button class="rail-button" type="button" data-view="matrix" title="Confusion matrix">MX</button>
+      <button class="rail-button" type="button" data-view="samples" title="Samples">IM</button>
+    </nav>
+
+    <section class="workspace">
+      <header class="hero">
+        <div>
+          <p class="kicker">deep learning / computer vision</p>
+          <h1>Cyber Vision Lab</h1>
+        </div>
+        <div class="mode-box" role="group" aria-label="mode">
+          <button class="mode active" type="button" data-mode="python">Python</button>
+          <button class="mode" type="button" data-mode="matlab">MATLAB</button>
+        </div>
+      </header>
+
+      <section class="stat-grid" aria-label="run metrics">
+        <article>
+          <span>accuracy</span>
+          <strong id="accuracy">--</strong>
+        </article>
+        <article>
+          <span>samples</span>
+          <strong id="samples">--</strong>
+        </article>
+        <article>
+          <span>features</span>
+          <strong id="features">--</strong>
+        </article>
+        <article>
+          <span>loss</span>
+          <strong id="loss">--</strong>
+        </article>
+      </section>
+
+      <section class="main-grid">
+        <div class="visual-stage">
+          <div class="stage-head">
+            <div>
+              <p id="stage-label">training curve</p>
+              <h2 id="stage-title">Python native run</h2>
+            </div>
+            <label class="heat-toggle">
+              <input id="heat-toggle" type="checkbox" checked>
+              <span>heat</span>
+            </label>
+          </div>
+          <img id="stage-image" src="/outputs/training_curve.png" alt="Training curve">
+        </div>
+
+        <aside class="terminal-panel">
+          <div class="terminal-head">
+            <span>model stack</span>
+            <strong id="mode-label">PY</strong>
+          </div>
+          <pre id="stack-copy">loading...</pre>
+          <div class="threshold">
+            <label for="confidence-range">confidence</label>
+            <input id="confidence-range" type="range" min="0" max="100" value="70">
+            <output id="confidence-value">70</output>
+          </div>
+        </aside>
+      </section>
+
+      <section class="prediction-zone">
+        <div class="zone-head">
+          <h2>High confidence predictions</h2>
+          <span id="filtered-count">--</span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Sample</th>
+              <th>Actual</th>
+              <th>Predicted</th>
+              <th>Confidence</th>
+            </tr>
+          </thead>
+          <tbody id="prediction-table"></tbody>
+        </table>
+      </section>
+    </section>
+  </main>
+  <script src="app.js?v=1"></script>
+</body>
+</html>

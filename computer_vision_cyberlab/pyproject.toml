@@ -1,0 +1,13 @@
+[project]
+name = "vision-cyberlab"
+version = "0.1.0"
+description = "Deep learning computer vision demo with Python and MATLAB reference files"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "pillow",
+]
+
+[tool.setuptools]
+packages = ["vision_cyberlab"]
