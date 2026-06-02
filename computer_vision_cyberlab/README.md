@@ -1,8 +1,8 @@
 # Deep Learning for Computer Vision using Python and MATLAB
 
-This is my computer vision deep learning mini project. I wanted it to look different from normal college projects, so the UI is cyberpunk themed and the code is kept readable like something I can explain in viva without freezing.
+This project demonstrates a computer vision deep learning workflow with a cyberpunk themed dashboard, Python model code, MATLAB reference scripts, tests, and captured outputs.
 
-The project trains a tiny neural network to classify synthetic vision samples. The images are generated with noisy neon patterns, then Python extracts convolution style filter-bank features and trains a small ReLU + Softmax network. I also added MATLAB scripts showing how the same idea can be done using image datastores and CNN layers.
+The project trains a tiny neural network to classify synthetic vision samples. The images are generated with noisy neon patterns, then Python extracts convolution-style filter-bank features and trains a small ReLU + Softmax network. MATLAB scripts show how the same idea can be represented with image datastores and CNN layers.
 
 ## Idea
 
@@ -62,8 +62,8 @@ Open `matlab/cyberVisionDemo.m` in MATLAB. It shows the same pipeline in MATLAB 
 - prediction
 - confusion chart
 
-I did not make MATLAB mandatory for the native run because not every system has MATLAB installed. The Python project runs fully here and the MATLAB part is kept as the reference side.
+MATLAB is not required for the native run. The Python project runs fully on its own, and the MATLAB files are included as the reference workflow.
 
 ## Final note
 
-This is a learning project, not some production level vision AI. But it is complete enough to show dataset generation, feature extraction, neural network training, testing, outputs and UI. Basically one proper computer vision project, not just theory screenshots.
+This is a learning project, not a production vision system. It covers dataset generation, feature extraction, neural network training, testing, output capture, and dashboard presentation.
