@@ -1,5 +1,8 @@
 from __future__ import annotations
 
+from collections.abc import AsyncIterator
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -8,11 +11,21 @@ from app.db.database import initialize_database
 from app.services.model_service import model_service
 
 
+@asynccontextmanager
+async def lifespan(_: FastAPI) -> AsyncIterator[None]:
+    """Prepare the local database and model artifact before serving requests."""
+
+    initialize_database()
+    _ = model_service.artifact
+    yield
+
+
 def create_app() -> FastAPI:
     app = FastAPI(
         title="Ocular and Metabolic Obesity Risk API",
         description="Predict obesity risk from ocular and metabolic biomarkers.",
         version="1.0.0",
+        lifespan=lifespan,
     )
 
     app.add_middleware(
@@ -22,11 +35,6 @@ def create_app() -> FastAPI:
         allow_methods=["*"],
         allow_headers=["*"],
     )
-
-    @app.on_event("startup")
-    def startup() -> None:
-        initialize_database()
-        _ = model_service.artifact
 
     @app.get("/health")
     def health() -> dict[str, str]:
