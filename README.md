@@ -1,4 +1,4 @@
-# TextClassify ML
+Obesity metabolic mini project 
 
 A clean, minimal browser-based machine learning project for text classification.
 
