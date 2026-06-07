@@ -54,7 +54,6 @@ billing-renewal-system/
 ├── config.py
 ├── requirements.txt
 ├── README.md
-├── DEVELOPMENT_PLAN.md
 ├── models/
 ├── routes/
 ├── services/
