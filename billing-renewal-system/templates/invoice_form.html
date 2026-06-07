@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Generate Invoice - BillingFlow{% endblock %}
+{% block content %}
+<section class="page-header">
+    <div>
+        <p class="section-kicker">Billing</p>
+        <h1>Generate Invoice</h1>
+    </div>
+</section>
+
+<div class="panel form-panel">
+    <form method="post" action="{{ url_for('invoices.generate_invoice') }}" class="row g-3">
+        <div class="col-12">
+            <label class="form-label">Subscription</label>
+            <select name="subscription_id" class="form-select" required>
+                {% for item in subscriptions %}
+                    <option value="{{ item.id }}">{{ item.customer.name }} - {{ item.service.name }} - {{ item.plan_type }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-12 d-flex gap-2">
+            <button class="btn btn-primary">Generate</button>
+            <a class="btn btn-light" href="{{ url_for('invoices.invoice_history') }}">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

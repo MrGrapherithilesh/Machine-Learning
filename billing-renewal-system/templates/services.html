@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Services - BillingFlow{% endblock %}
+{% block content %}
+<section class="page-header">
+    <div>
+        <p class="section-kicker">Services</p>
+        <h1>Subscription Services</h1>
+    </div>
+</section>
+
+<section class="content-grid">
+    <div class="panel">
+        <div class="panel-title"><h2>Add Service</h2><span>Monthly, quarterly, yearly</span></div>
+        <form method="post" class="row g-3">
+            <div class="col-12">
+                <label class="form-label">Service Name</label>
+                <input name="name" class="form-control" required>
+            </div>
+            <div class="col-12">
+                <label class="form-label">Description</label>
+                <textarea name="description" class="form-control" rows="3"></textarea>
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">Monthly</label>
+                <input name="monthly_price" type="number" min="0" step="0.01" class="form-control" required>
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">Quarterly</label>
+                <input name="quarterly_price" type="number" min="0" step="0.01" class="form-control" required>
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">Yearly</label>
+                <input name="yearly_price" type="number" min="0" step="0.01" class="form-control" required>
+            </div>
+            <div class="col-12"><button class="btn btn-primary">Save Service</button></div>
+        </form>
+    </div>
+    <div class="panel">
+        <div class="panel-title"><h2>Plan List</h2><span>{{ services|length }} services</span></div>
+        <div class="stack-list">
+            {% for service in services %}
+                <div class="service-card">
+                    <div class="d-flex justify-content-between align-items-start gap-3">
+                        <div>
+                            <h3>{{ service.name }}</h3>
+                            <p>{{ service.description }}</p>
+                        </div>
+                        <span class="badge text-bg-{{ 'success' if service.is_active else 'secondary' }}">
+                            {{ "Active" if service.is_active else "Paused" }}
+                        </span>
+                    </div>
+                    <div class="price-row">
+                        <span>₹{{ "%.0f"|format(service.monthly_price) }} / mo</span>
+                        <span>₹{{ "%.0f"|format(service.quarterly_price) }} / qtr</span>
+                        <span>₹{{ "%.0f"|format(service.yearly_price) }} / yr</span>
+                    </div>
+                    <form method="post" action="{{ url_for('services.toggle_service', service_id=service.id) }}">
+                        <button class="btn btn-sm btn-light">{{ "Pause" if service.is_active else "Activate" }}</button>
+                    </form>
+                </div>
+            {% else %}
+                <p class="empty-text">No services configured.</p>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block title %}{{ customer.name }} - BillingFlow{% endblock %}
+{% block content %}
+<section class="page-header">
+    <div>
+        <p class="section-kicker">Profile</p>
+        <h1>{{ customer.name }}</h1>
+        <p class="muted-line">{{ customer.email }} · {{ customer.phone }} · {{ customer.city or "City not added" }}</p>
+    </div>
+    <div class="d-flex gap-2">
+        <a class="btn btn-outline-primary" href="{{ url_for('customers.edit_customer', customer_id=customer.id) }}">Edit</a>
+        <form method="post" action="{{ url_for('customers.delete_customer', customer_id=customer.id) }}" onsubmit="return confirmDelete()">
+            <button class="btn btn-outline-danger">Delete</button>
+        </form>
+    </div>
+</section>
+
+<section class="content-grid">
+    <div class="panel">
+        <div class="panel-title"><h2>Subscriptions</h2><span>{{ customer.subscriptions|length }} total</span></div>
+        <div class="stack-list">
+            {% for item in customer.subscriptions %}
+                <div class="list-row">
+                    <div>
+                        <strong>{{ item.service.name }}</strong>
+                        <small>{{ item.plan_type }} · Ends {{ item.end_date.strftime("%d %b %Y") }}</small>
+                    </div>
+                    <span class="badge text-bg-{{ 'success' if item.status == 'Active' else 'secondary' }}">{{ item.status }}</span>
+                </div>
+            {% else %}
+                <p class="empty-text">No subscriptions added.</p>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-title"><h2>Add Subscription</h2><span>Assign a plan</span></div>
+        <form method="post" action="{{ url_for('customers.add_subscription', customer_id=customer.id) }}" class="row g-3">
+            <div class="col-12">
+                <label class="form-label">Service</label>
+                <select name="service_id" class="form-select" required>
+                    {% for service in services %}
+                        <option value="{{ service.id }}">{{ service.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-12">
+                <label class="form-label">Plan</label>
+                <select name="plan_type" class="form-select">
+                    <option>Monthly</option>
+                    <option>Quarterly</option>
+                    <option>Yearly</option>
+                </select>
+            </div>
+            <div class="col-12 form-check ms-2">
+                <input class="form-check-input" type="checkbox" name="auto_renew" checked id="autoRenew">
+                <label class="form-check-label" for="autoRenew">Auto renew</label>
+            </div>
+            <div class="col-12"><button class="btn btn-primary">Add Plan</button></div>
+        </form>
+    </div>
+</section>
+
+<div class="panel">
+    <div class="panel-title"><h2>Invoice History</h2><span>{{ customer.invoices|length }} invoices</span></div>
+    <div class="table-responsive">
+        <table class="table align-middle">
+            <thead><tr><th>Invoice</th><th>Date</th><th>Total</th><th>Status</th></tr></thead>
+            <tbody>
+            {% for invoice in customer.invoices %}
+                <tr>
+                    <td>{{ invoice.invoice_number }}</td>
+                    <td>{{ invoice.issue_date.strftime("%d %b %Y") }}</td>
+                    <td>₹{{ "%.2f"|format(invoice.total_amount) }}</td>
+                    <td><span class="badge text-bg-{{ 'success' if invoice.status == 'Paid' else 'warning' }}">{{ invoice.status }}</span></td>
+                </tr>
+            {% else %}
+                <tr><td colspan="4">No invoices yet.</td></tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

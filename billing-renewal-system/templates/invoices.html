@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Invoices - BillingFlow{% endblock %}
+{% block content %}
+<section class="page-header">
+    <div>
+        <p class="section-kicker">Billing</p>
+        <h1>Invoice History</h1>
+    </div>
+    <a href="{{ url_for('invoices.new_invoice') }}" class="btn btn-primary">Generate Invoice</a>
+</section>
+
+<div class="panel">
+    <div class="table-responsive">
+        <table class="table align-middle">
+            <thead>
+            <tr><th>Invoice</th><th>Customer</th><th>Service</th><th>Subtotal</th><th>Tax</th><th>Discount</th><th>Total</th><th>Status</th><th></th></tr>
+            </thead>
+            <tbody>
+            {% for invoice in invoices %}
+                <tr>
+                    <td class="fw-semibold">{{ invoice.invoice_number }}</td>
+                    <td>{{ invoice.customer.name }}</td>
+                    <td>{{ invoice.subscription.service.name if invoice.subscription else "-" }}</td>
+                    <td>₹{{ "%.2f"|format(invoice.subtotal) }}</td>
+                    <td>₹{{ "%.2f"|format(invoice.tax_amount) }}</td>
+                    <td>₹{{ "%.2f"|format(invoice.discount_amount) }}</td>
+                    <td>₹{{ "%.2f"|format(invoice.total_amount) }}</td>
+                    <td><span class="badge text-bg-{{ 'success' if invoice.status == 'Paid' else 'warning' }}">{{ invoice.status }}</span></td>
+                    <td>
+                        {% if invoice.status != "Paid" %}
+                        <form class="pay-form" method="post" action="{{ url_for('invoices.mark_payment', invoice_id=invoice.id) }}">
+                            <input type="hidden" name="amount" value="{{ invoice.total_amount }}">
+                            <input type="hidden" name="payment_mode" value="UPI">
+                            <button class="btn btn-sm btn-outline-primary">Mark Paid</button>
+                        </form>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% else %}
+                <tr><td colspan="9">No invoices available.</td></tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

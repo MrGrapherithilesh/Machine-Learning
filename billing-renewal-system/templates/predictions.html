@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}Predictions - BillingFlow{% endblock %}
+{% block content %}
+<section class="page-header">
+    <div>
+        <p class="section-kicker">Analytics</p>
+        <h1>Renewal & Churn Prediction</h1>
+    </div>
+</section>
+
+<section class="content-grid">
+    <div class="panel">
+        <div class="panel-title"><h2>Customer Signals</h2><span>Model input</span></div>
+        <form method="post" class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label">Months Active</label>
+                <input name="months_active" type="number" class="form-control" value="{{ values.months_active }}" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Monthly Spend</label>
+                <input name="monthly_spend" type="number" class="form-control" value="{{ values.monthly_spend }}" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Support Tickets</label>
+                <input name="support_tickets" type="number" class="form-control" value="{{ values.support_tickets }}" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Late Payments</label>
+                <input name="late_payments" type="number" class="form-control" value="{{ values.late_payments }}" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Usage Score</label>
+                <input name="usage_score" type="number" min="0" max="100" class="form-control" value="{{ values.usage_score }}" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Previous Renewals</label>
+                <input name="previous_renewals" type="number" class="form-control" value="{{ values.previous_renewals }}" required>
+            </div>
+            <div class="col-12"><button class="btn btn-primary">Run Prediction</button></div>
+        </form>
+    </div>
+    <div class="panel">
+        <div class="panel-title"><h2>Prediction Result</h2><span>Random Forest + Logistic Regression</span></div>
+        {% if result %}
+            <div class="prediction-card">
+                <span>Renewal Probability</span>
+                <strong>{{ result.renewal_probability }}%</strong>
+                <p>{{ result.prediction_result }}</p>
+            </div>
+            <div class="prediction-card risk">
+                <span>Churn Risk</span>
+                <strong>{{ result.churn_risk }}%</strong>
+                <p>{{ result.risk_label }}</p>
+            </div>
+        {% else %}
+            <p class="empty-text">Enter customer values and run prediction.</p>
+        {% endif %}
+    </div>
+</section>
+
+<div class="panel">
+    <div class="panel-title"><h2>Revenue Forecast</h2><span>Simple 6 month projection</span></div>
+    <div class="forecast-grid">
+        {% for item in revenue_forecast %}
+            <div class="forecast-card">
+                <span>Month {{ item.month }}</span>
+                <strong>₹{{ "%.2f"|format(item.revenue) }}</strong>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

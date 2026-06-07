@@ -34,3 +34,19 @@ python -m vision_cyberlab.cli serve --port 8790
 ```
 
 ![Computer vision dashboard](computer_vision_cyberlab/outputs/ui-dashboard.png)
+
+### 3. Billing & Subscription Renewal Management System
+
+Flask based billing and renewal management app with customer records, invoices, payment tracking, dashboard analytics, and prediction workflows.
+
+- Code: `billing-renewal-system/`
+- Screenshot folder: `billing-renewal-system/screenshots/`
+- Run:
+
+```bash
+cd billing-renewal-system
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python app.py
+```

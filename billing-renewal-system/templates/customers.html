@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Customers - BillingFlow{% endblock %}
+{% block content %}
+<section class="page-header">
+    <div>
+        <p class="section-kicker">Customers</p>
+        <h1>Customer Management</h1>
+    </div>
+    <a class="btn btn-primary" href="{{ url_for('customers.add_customer') }}">Add Customer</a>
+</section>
+
+<form class="search-bar" method="get">
+    <input class="form-control" name="q" placeholder="Search by name, email or company" value="{{ query }}">
+    <button class="btn btn-outline-primary">Search</button>
+</form>
+
+<div class="panel">
+    <div class="table-responsive">
+        <table class="table align-middle">
+            <thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>Company</th><th>City</th><th></th></tr></thead>
+            <tbody>
+            {% for customer in customers %}
+                <tr>
+                    <td class="fw-semibold">{{ customer.name }}</td>
+                    <td>{{ customer.email }}</td>
+                    <td>{{ customer.phone }}</td>
+                    <td>{{ customer.company or "-" }}</td>
+                    <td>{{ customer.city or "-" }}</td>
+                    <td class="text-end">
+                        <a href="{{ url_for('customers.view_customer', customer_id=customer.id) }}" class="btn btn-sm btn-light">View</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr><td colspan="6">No customers found.</td></tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

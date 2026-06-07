@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - BillingFlow{% endblock %}
+{% block content %}
+<section class="page-header">
+    <div>
+        <p class="section-kicker">Overview</p>
+        <h1>Billing Dashboard</h1>
+    </div>
+    <a href="{{ url_for('customers.add_customer') }}" class="btn btn-primary">Add Customer</a>
+</section>
+
+<section class="stats-grid">
+    <div class="stat-card"><span>Total Customers</span><strong>{{ stats.total_customers }}</strong></div>
+    <div class="stat-card"><span>Active Subscriptions</span><strong>{{ stats.active_subscriptions }}</strong></div>
+    <div class="stat-card"><span>Expiring Soon</span><strong>{{ stats.expiring_subscriptions }}</strong></div>
+    <div class="stat-card"><span>This Month Revenue</span><strong>₹{{ "%.2f"|format(stats.monthly_revenue) }}</strong></div>
+    <div class="stat-card"><span>Unpaid Invoices</span><strong>{{ stats.unpaid_invoices }}</strong></div>
+</section>
+
+<section class="content-grid">
+    <div class="panel wide-panel">
+        <div class="panel-title">
+            <h2>Monthly Revenue</h2>
+            <span>Last 6 months</span>
+        </div>
+        <canvas id="revenueChart" height="120"></canvas>
+    </div>
+    <div class="panel">
+        <div class="panel-title">
+            <h2>Upcoming Renewals</h2>
+            <span>{{ expiring|length }} subscriptions</span>
+        </div>
+        <div class="stack-list">
+            {% for item in expiring %}
+                <div class="list-row">
+                    <div>
+                        <strong>{{ item.customer.name }}</strong>
+                        <small>{{ item.service.name }} - {{ item.plan_type }}</small>
+                    </div>
+                    <span class="badge text-bg-warning">{{ item.days_left() }} days</span>
+                </div>
+            {% else %}
+                <p class="empty-text">No renewals due soon.</p>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="content-grid">
+    <div class="panel">
+        <div class="panel-title"><h2>Recent Payments</h2><span>Latest activity</span></div>
+        <div class="table-responsive">
+            <table class="table align-middle">
+                <thead><tr><th>Customer</th><th>Amount</th><th>Date</th></tr></thead>
+                <tbody>
+                {% for payment in recent_payments %}
+                    <tr>
+                        <td>{{ payment.customer.name }}</td>
+                        <td>₹{{ "%.2f"|format(payment.amount) }}</td>
+                        <td>{{ payment.payment_date.strftime("%d %b %Y") }}</td>
+                    </tr>
+                {% else %}
+                    <tr><td colspan="3">No payments yet.</td></tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-title"><h2>Active Plans</h2><span>Quick glance</span></div>
+        <div class="stack-list">
+            {% for item in active %}
+                <div class="list-row">
+                    <div>
+                        <strong>{{ item.customer.name }}</strong>
+                        <small>{{ item.service.name }}</small>
+                    </div>
+                    <span class="badge text-bg-primary">{{ item.plan_type }}</span>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+    window.revenueLabels = {{ chart_data["labels"]|tojson }};
+    window.revenueValues = {{ chart_data["values"]|tojson }};
+    renderRevenueChart();
+</script>
+{% endblock %}

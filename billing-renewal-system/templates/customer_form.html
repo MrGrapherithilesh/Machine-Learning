@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Customer Form - BillingFlow{% endblock %}
+{% block content %}
+<section class="page-header">
+    <div>
+        <p class="section-kicker">Customer</p>
+        <h1>{{ "Edit Customer" if customer else "Add Customer" }}</h1>
+    </div>
+</section>
+
+<div class="panel form-panel">
+    <form method="post" class="row g-3">
+        <div class="col-md-6">
+            <label class="form-label">Name</label>
+            <input name="name" class="form-control" required value="{{ customer.name if customer else '' }}">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Email</label>
+            <input name="email" type="email" class="form-control" required value="{{ customer.email if customer else '' }}">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Phone</label>
+            <input name="phone" class="form-control" required value="{{ customer.phone if customer else '' }}">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Company</label>
+            <input name="company" class="form-control" value="{{ customer.company if customer else '' }}">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">City</label>
+            <input name="city" class="form-control" value="{{ customer.city if customer else '' }}">
+        </div>
+        <div class="col-12 d-flex gap-2">
+            <button class="btn btn-primary">Save Customer</button>
+            <a href="{{ url_for('customers.list_customers') }}" class="btn btn-light">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
