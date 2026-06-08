@@ -1,39 +1,122 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Traffic Volume Predictor</title>
 <style>
-:root { --accent: #FF3B30; --bg: #f5f7fb; --ink: #111827; --muted: #667085; }
-body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
-.wrap { max-width: 1040px; margin: 0 auto; padding: 34px 20px; }
-.hero { background: #fff; border: 1px solid #e6eaf2; border-radius: 18px; padding: 26px; box-shadow: 0 18px 45px rgba(18, 38, 63, .08); }
-.kicker { color: var(--accent); font-size: 13px; font-weight: 800; text-transform: uppercase; }
-h1 { margin: 8px 0 8px; font-size: 34px; }
-p { color: var(--muted); line-height: 1.6; }
-.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 18px; }
-.card { background: #fff; border: 1px solid #e6eaf2; border-radius: 16px; padding: 18px; }
-.metric { font-size: 32px; font-weight: 850; color: var(--accent); }
-table { width: 100%; border-collapse: collapse; }
-td { padding: 10px 0; border-bottom: 1px solid #edf0f5; }
-img { max-width: 100%; border-radius: 12px; border: 1px solid #e6eaf2; }
-@media (max-width: 760px) { .grid { grid-template-columns: 1fr; } h1 { font-size: 28px; } }
+body{
+    margin:0;
+    padding:0;
+    background:#f4f4f4;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#222;
+}
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:30px auto;
+}
+.header{
+    background:#ffffff;
+    padding:25px;
+    border-radius:12px;
+    border:1px solid #ddd;
+}
+.small-title{
+    color:#d32f2f;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+h1{
+    margin:0;
+    font-size:32px;
+}
+.description{
+    color:#555;
+    margin-top:12px;
+    line-height:1.6;
+}
+.score{
+    font-size:36px;
+    font-weight:bold;
+    color:#d32f2f;
+    margin-top:20px;
+}
+.layout{
+    display:flex;
+    gap:20px;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+.box{
+    flex:1;
+    min-width:280px;
+    background:#ffffff;
+    padding:20px;
+    border-radius:12px;
+    border:1px solid #ddd;
+}
+.box h2{
+    margin-top:0;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+table td{
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+}
+img{
+    width:100%;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+@media(max-width:768px){
+    h1{
+        font-size:26px;
+    }
+    .layout{
+        flex-direction:column;
+    }
+}
 </style>
 </head>
 <body>
-<div class="wrap">
-<section class="hero">
-<div class="kicker">Mithilesh Portfolio Project</div>
-<h1>Traffic Volume Predictor</h1>
-<p>Predicts city traffic volume from weather, hour, day, and event signals.</p>
-<div class="metric">89.4%</div>
-<p>Traffic volume R2 score</p>
-</section>
-<section class="grid">
-<div class="card"><h2>Run Summary</h2><table><tr><td>R2 Score</td><td>0.8939</td></tr><tr><td>Mae</td><td>123.51</td></tr></table></div>
-<div class="card"><h2>Output Chart</h2><img src="dashboard.png" alt="project dashboard chart"></div>
-</section>
+<div class="container">
+    <div class="header">
+        <div class="small-title">Machine Learning Project</div>
+        <h1>Traffic Volume Predictor</h1>
+        <p class="description">
+            This project predicts traffic volume using different factors such as
+            weather conditions, time, weekdays, and special events.
+            The model was trained on traffic datasets and gives accurate predictions
+            for smart traffic analysis.
+        </p>
+        <div class="score">89.4% Accuracy</div>
+        <p>Model performance based on R2 evaluation score.</p>
+    </div>
+    <div class="layout">
+        <div class="box">
+            <h2>Model Results</h2>
+            <table>
+                <tr>
+                    <td><strong>R2 Score</strong></td>
+                    <td>0.8939</td>
+                </tr>
+                <tr>
+                    <td><strong>MAE</strong></td>
+                    <td>123.51</td>
+                </tr>
+            </table>
+        </div>
+        <div class="box">
+            <h2>Prediction Output</h2>
+            <img src="dashboard.png" alt="Traffic Prediction Dashboard">
+        </div>
+    </div>
 </div>
 </body>
 </html>
