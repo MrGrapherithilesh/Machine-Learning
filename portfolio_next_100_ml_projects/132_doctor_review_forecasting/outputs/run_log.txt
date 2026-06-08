@@ -1,0 +1,1 @@
+Doctor Review Forecaster completed with {"r2_score": 0.6931, "mae": 30.37, "main_score": "69.3%"}

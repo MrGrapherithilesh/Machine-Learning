@@ -1,0 +1,1 @@
+Invoice Delay Regressor completed with {"r2_score": 0.8755, "mae": 37.77, "main_score": "87.5%"}

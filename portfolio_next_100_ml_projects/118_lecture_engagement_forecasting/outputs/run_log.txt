@@ -1,0 +1,1 @@
+Lecture Engagement Forecaster completed with {"r2_score": 0.8857, "mae": 22.16, "main_score": "88.6%"}

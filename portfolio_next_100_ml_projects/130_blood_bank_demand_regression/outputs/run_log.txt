@@ -1,0 +1,1 @@
+Blood Bank Demand Regressor completed with {"r2_score": 0.8486, "mae": 29.1, "main_score": "84.9%"}

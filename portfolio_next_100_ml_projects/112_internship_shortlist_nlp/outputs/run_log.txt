@@ -1,0 +1,1 @@
+Internship Shortlist Text Matcher completed with {"best_match_score": 0.779, "samples": 3, "main_score": "77.9%"}

@@ -1,0 +1,1 @@
+Electricity Bill Regressor completed with {"r2_score": 0.8665, "mae": 29.55, "main_score": "86.6%"}

@@ -1,0 +1,1 @@
+Restaurant Queue Regressor completed with {"r2_score": 0.8808, "mae": 35.22, "main_score": "88.1%"}

@@ -1,0 +1,1 @@
+Vehicle Service Forecaster completed with {"r2_score": 0.8831, "mae": 20.83, "main_score": "88.3%"}

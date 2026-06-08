@@ -1,0 +1,1 @@
+Hostel Mess Rating Forecaster completed with {"r2_score": 0.9243, "mae": 18.8, "main_score": "92.4%"}

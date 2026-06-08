@@ -1,0 +1,1 @@
+Cab Fare Regressor completed with {"r2_score": 0.8038, "mae": 37.66, "main_score": "80.4%"}

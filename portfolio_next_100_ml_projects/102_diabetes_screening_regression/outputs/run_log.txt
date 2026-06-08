@@ -1,0 +1,1 @@
+Diabetes Screening Regressor completed with {"r2_score": 0.8494, "mae": 45.39, "main_score": "84.9%"}

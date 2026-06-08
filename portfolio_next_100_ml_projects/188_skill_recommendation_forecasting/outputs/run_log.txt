@@ -1,0 +1,1 @@
+Skill Recommendation Forecaster completed with {"r2_score": 0.8616, "mae": 23.45, "main_score": "86.2%"}

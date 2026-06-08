@@ -1,0 +1,1 @@
+Fitness Class Regressor completed with {"r2_score": 0.8726, "mae": 26.27, "main_score": "87.3%"}

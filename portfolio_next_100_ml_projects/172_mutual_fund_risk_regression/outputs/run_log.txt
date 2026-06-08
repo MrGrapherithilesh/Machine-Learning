@@ -1,0 +1,1 @@
+Mutual Fund Risk Regressor completed with {"r2_score": 0.9128, "mae": 27.03, "main_score": "91.3%"}

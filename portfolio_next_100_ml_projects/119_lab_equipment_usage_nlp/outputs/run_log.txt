@@ -1,0 +1,1 @@
+Lab Equipment Usage Text Matcher completed with {"best_match_score": 0.788, "samples": 3, "main_score": "78.8%"}

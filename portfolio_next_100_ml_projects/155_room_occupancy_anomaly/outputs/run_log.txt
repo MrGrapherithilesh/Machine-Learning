@@ -1,0 +1,1 @@
+Room Occupancy Anomaly Detector completed with {"anomaly_rate": 0.0912, "flagged_rows": 26, "main_score": "9.1%"}

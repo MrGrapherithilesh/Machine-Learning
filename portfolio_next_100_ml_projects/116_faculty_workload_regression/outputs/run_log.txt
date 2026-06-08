@@ -1,0 +1,1 @@
+Faculty Workload Regressor completed with {"r2_score": 0.8313, "mae": 41.75, "main_score": "83.1%"}

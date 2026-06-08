@@ -1,0 +1,1 @@
+Upi Transaction Forecaster completed with {"r2_score": 0.6855, "mae": 33.24, "main_score": "68.5%"}

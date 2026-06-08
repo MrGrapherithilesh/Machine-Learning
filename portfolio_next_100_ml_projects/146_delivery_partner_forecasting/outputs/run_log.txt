@@ -1,0 +1,1 @@
+Delivery Partner Forecaster completed with {"r2_score": 0.8483, "mae": 22.62, "main_score": "84.8%"}

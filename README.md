@@ -215,3 +215,18 @@ cd portfolio_100_ml_projects/001_student_performance_classification
 python main.py
 pytest tests
 ```
+
+### 15. Next 100 Python Machine Learning Mini Projects
+
+A second structured collection of compact Python ML projects numbered 101-200, with fresh topics across student, healthcare, finance, retail, transport, NLP, and systems use cases.
+
+- Code: `portfolio_next_100_ml_projects/`
+- Index: `portfolio_next_100_ml_projects/README.md`
+- Each project includes code, README, test, metrics output, chart screenshot, and HTML preview.
+- Run one project:
+
+```bash
+cd portfolio_next_100_ml_projects/101_mental_health_check_classification
+python main.py
+pytest tests
+```

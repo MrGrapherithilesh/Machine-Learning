@@ -1,0 +1,1 @@
+Placement Readiness Forecaster completed with {"r2_score": 0.6494, "mae": 28.44, "main_score": "64.9%"}

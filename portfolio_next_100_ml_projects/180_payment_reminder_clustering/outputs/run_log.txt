@@ -1,0 +1,1 @@
+Payment Reminder Clustering completed with {"silhouette_score": 0.7681, "clusters": 4, "main_score": "0.77"}

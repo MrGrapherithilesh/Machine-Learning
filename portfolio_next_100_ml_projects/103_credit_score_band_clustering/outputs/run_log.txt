@@ -1,0 +1,1 @@
+Credit Score Band Clustering completed with {"silhouette_score": 0.5703, "clusters": 4, "main_score": "0.57"}

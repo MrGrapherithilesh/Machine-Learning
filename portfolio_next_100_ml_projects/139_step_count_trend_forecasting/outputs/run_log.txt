@@ -1,0 +1,1 @@
+Step Count Trend Forecaster completed with {"r2_score": 0.895, "mae": 21.62, "main_score": "89.5%"}
