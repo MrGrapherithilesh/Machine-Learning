@@ -1,0 +1,1 @@
+Customer Segmentation Lab pipeline completed. Metrics: {"silhouette_score": 0.782, "segments": 4, "main_score": "0.78", "score_label": "Silhouette score"}

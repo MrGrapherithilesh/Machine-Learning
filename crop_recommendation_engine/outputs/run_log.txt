@@ -1,0 +1,1 @@
+Crop Recommendation Engine pipeline completed. Metrics: {"accuracy": 1.0, "main_score": "100.0%", "score_label": "Crop recommendation accuracy"}
