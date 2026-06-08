@@ -1,0 +1,1 @@
+Sentiment Pulse Regressor completed with {"r2_score": 0.869, "mae": 31.89, "main_score": "86.9%"}

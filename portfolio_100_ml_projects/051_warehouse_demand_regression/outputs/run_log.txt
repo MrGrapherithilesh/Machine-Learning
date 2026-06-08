@@ -1,0 +1,1 @@
+Warehouse Demand Regressor completed with {"r2_score": 0.8957, "mae": 30.48, "main_score": "89.6%"}

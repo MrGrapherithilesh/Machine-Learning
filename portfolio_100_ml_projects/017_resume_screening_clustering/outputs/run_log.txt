@@ -1,0 +1,1 @@
+Resume Screening Clustering completed with {"silhouette_score": 0.7274, "clusters": 4, "main_score": "0.73"}

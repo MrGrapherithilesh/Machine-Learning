@@ -1,0 +1,1 @@
+Expense Pattern Forecaster completed with {"r2_score": 0.9359, "mae": 18.26, "main_score": "93.6%"}

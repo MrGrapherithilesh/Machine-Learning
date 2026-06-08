@@ -1,0 +1,1 @@
+Clinic No Show Regressor completed with {"r2_score": 0.8079, "mae": 61.71, "main_score": "80.8%"}

@@ -1,0 +1,1 @@
+Career Path Forecaster completed with {"r2_score": 0.7001, "mae": 25.09, "main_score": "70.0%"}

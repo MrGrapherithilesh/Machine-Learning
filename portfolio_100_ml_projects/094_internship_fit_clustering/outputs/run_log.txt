@@ -1,0 +1,1 @@
+Internship Fit Clustering completed with {"silhouette_score": 0.6446, "clusters": 4, "main_score": "0.64"}

@@ -1,0 +1,1 @@
+Salary Estimate Forecaster completed with {"r2_score": 0.792, "mae": 27.6, "main_score": "79.2%"}

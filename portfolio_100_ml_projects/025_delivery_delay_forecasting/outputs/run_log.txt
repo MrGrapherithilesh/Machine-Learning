@@ -1,0 +1,1 @@
+Delivery Delay Forecaster completed with {"r2_score": 0.8521, "mae": 23.84, "main_score": "85.2%"}

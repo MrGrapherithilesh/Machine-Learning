@@ -1,0 +1,1 @@
+Plant Disease Regressor completed with {"r2_score": 0.8569, "mae": 38.91, "main_score": "85.7%"}

@@ -1,0 +1,1 @@
+Email Priority Forecaster completed with {"r2_score": 0.8581, "mae": 20.39, "main_score": "85.8%"}

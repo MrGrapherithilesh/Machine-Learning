@@ -1,0 +1,1 @@
+Sales Conversion Regressor completed with {"r2_score": 0.8519, "mae": 29.37, "main_score": "85.2%"}

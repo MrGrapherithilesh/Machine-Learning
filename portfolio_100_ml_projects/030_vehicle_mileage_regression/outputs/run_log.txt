@@ -1,0 +1,1 @@
+Vehicle Mileage Regressor completed with {"r2_score": 0.8607, "mae": 46.48, "main_score": "86.1%"}

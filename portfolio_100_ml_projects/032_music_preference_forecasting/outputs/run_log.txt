@@ -1,0 +1,1 @@
+Music Preference Forecaster completed with {"r2_score": 0.8731, "mae": 20.26, "main_score": "87.3%"}

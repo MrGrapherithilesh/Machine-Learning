@@ -1,0 +1,1 @@
+Cyber Log Forecaster completed with {"r2_score": 0.9091, "mae": 19.15, "main_score": "90.9%"}

@@ -1,0 +1,1 @@
+Speech Intent Regressor completed with {"r2_score": 0.832, "mae": 39.47, "main_score": "83.2%"}

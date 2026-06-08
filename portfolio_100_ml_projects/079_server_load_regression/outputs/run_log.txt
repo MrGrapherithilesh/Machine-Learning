@@ -1,0 +1,1 @@
+Server Load Regressor completed with {"r2_score": 0.8668, "mae": 37.3, "main_score": "86.7%"}

@@ -1,0 +1,1 @@
+Factory Quality Clustering completed with {"silhouette_score": 0.5628, "clusters": 4, "main_score": "0.56"}

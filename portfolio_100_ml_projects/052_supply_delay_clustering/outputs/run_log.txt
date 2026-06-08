@@ -1,0 +1,1 @@
+Supply Delay Clustering completed with {"silhouette_score": 0.7259, "clusters": 4, "main_score": "0.73"}

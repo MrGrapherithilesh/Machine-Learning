@@ -1,0 +1,1 @@
+Bike Rental Forecaster completed with {"r2_score": 0.715, "mae": 32.63, "main_score": "71.5%"}

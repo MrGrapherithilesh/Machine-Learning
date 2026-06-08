@@ -1,0 +1,1 @@
+Hotel Booking Regressor completed with {"r2_score": 0.8923, "mae": 36.91, "main_score": "89.2%"}

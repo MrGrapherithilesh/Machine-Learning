@@ -1,0 +1,1 @@
+Scholarship Match Regressor completed with {"r2_score": 0.8513, "mae": 39.9, "main_score": "85.1%"}

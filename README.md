@@ -200,3 +200,18 @@ pip install -r requirements.txt
 python main.py
 pytest tests
 ```
+
+### 14. 100 Python Machine Learning Mini Projects
+
+A structured collection of compact machine learning projects covering classification, regression, clustering, forecasting, NLP matching, anomaly detection, and recommendation workflows.
+
+- Code: `portfolio_100_ml_projects/`
+- Index: `portfolio_100_ml_projects/README.md`
+- Each project includes code, README, test, metrics output, chart screenshot, and HTML preview.
+- Run one project:
+
+```bash
+cd portfolio_100_ml_projects/001_student_performance_classification
+python main.py
+pytest tests
+```

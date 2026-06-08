@@ -1,0 +1,1 @@
+Bank Marketing Forecaster completed with {"r2_score": 0.7386, "mae": 29.96, "main_score": "73.9%"}

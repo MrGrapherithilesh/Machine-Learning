@@ -1,0 +1,1 @@
+Call Center Load Forecaster completed with {"r2_score": 0.8011, "mae": 25.92, "main_score": "80.1%"}
