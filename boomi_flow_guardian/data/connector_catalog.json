@@ -1,0 +1,10 @@
+{
+  "connectors": [
+    {"name": "Salesforce", "aliases": ["sf", "crm", "sales cloud"], "category": "CRM", "auth": "OAuth 2.0", "base_cost": 130, "complexity": 0.66, "notes": "Good for account, contact, lead, and opportunity syncs."},
+    {"name": "NetSuite", "aliases": ["erp", "oracle netsuite"], "category": "ERP", "auth": "Token based", "base_cost": 160, "complexity": 0.78, "notes": "Useful for order, item, invoice, and finance syncs."},
+    {"name": "Shopify", "aliases": ["commerce", "store"], "category": "Ecommerce", "auth": "API token", "base_cost": 95, "complexity": 0.48, "notes": "Useful for product, order, and customer exports."},
+    {"name": "ServiceNow", "aliases": ["itsm", "support"], "category": "ITSM", "auth": "OAuth 2.0", "base_cost": 120, "complexity": 0.61, "notes": "Good for ticket, incident, and asset workflows."},
+    {"name": "Workday", "aliases": ["hrms", "hr"], "category": "HR", "auth": "OAuth 2.0", "base_cost": 145, "complexity": 0.72, "notes": "Useful for worker, payroll, and organization syncs."}
+  ]
+}
+

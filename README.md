@@ -245,3 +245,20 @@ cd portfolio_1000_ml_projects/0201_healthcare_risk_scoring_advanced_classificati
 python main.py
 pytest tests
 ```
+
+### 17. Boomi Flow Guardian
+
+A practical Python ML tool for planning Boomi-style integration flows. It suggests schema mappings, scores integration risk, validates retry/error-handling settings, estimates runtime and cost, and includes a Flask dashboard plus CLI report generation.
+
+- Code: `boomi_flow_guardian/`
+- Report: `boomi_flow_guardian/outputs/integration_report.json`
+- Screenshot preview: `boomi_flow_guardian/screenshots/dashboard_preview.html`
+- Run:
+
+```bash
+cd boomi_flow_guardian
+pip install -r requirements.txt
+python cli.py --source data/source_customer_schema.json --target data/target_crm_schema.json --system salesforce --volume 18000
+python main.py
+pytest tests
+```

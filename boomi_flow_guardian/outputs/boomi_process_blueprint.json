@@ -1,0 +1,154 @@
+{
+  "process_name": "Salesforce Customer Sync Plan",
+  "connector": "Salesforce",
+  "risk_band": "Low",
+  "estimated_runtime_minutes": 15.66,
+  "estimated_monthly_cost": 254.6,
+  "recommended_steps": [
+    {
+      "order": 1,
+      "shape": "start",
+      "name": "Scheduled Start",
+      "config": {
+        "schedule_minutes": 15
+      }
+    },
+    {
+      "order": 2,
+      "shape": "connector",
+      "name": "Read source records for Salesforce",
+      "config": {
+        "batch_size": 200
+      }
+    },
+    {
+      "order": 3,
+      "shape": "map",
+      "name": "Apply suggested field map",
+      "config": {
+        "mapping_count": 10,
+        "review_low_confidence": true
+      }
+    },
+    {
+      "order": 4,
+      "shape": "decision",
+      "name": "Check required fields and business rules",
+      "config": {
+        "high_priority_issues": 1
+      }
+    },
+    {
+      "order": 5,
+      "shape": "connector",
+      "name": "Upsert into Salesforce",
+      "config": {
+        "retry_enabled": true,
+        "retry_count": 3
+      }
+    },
+    {
+      "order": 6,
+      "shape": "error_route",
+      "name": "Route failed records",
+      "config": {
+        "dead_letter_enabled": true
+      }
+    },
+    {
+      "order": 7,
+      "shape": "notify",
+      "name": "Send run summary",
+      "config": {
+        "owner": "Mithilesh",
+        "risk_band": "Low"
+      }
+    }
+  ],
+  "mapping_table": [
+    {
+      "source_field": "email_address",
+      "target_field": "email",
+      "confidence": 0.648,
+      "transformation": "direct",
+      "notes": "Medium confidence match; review before building the map."
+    },
+    {
+      "source_field": "city_name",
+      "target_field": "city",
+      "confidence": 0.61,
+      "transformation": "direct",
+      "notes": "Medium confidence match; review before building the map."
+    },
+    {
+      "source_field": "signup_date",
+      "target_field": "created_on",
+      "confidence": 0.449,
+      "transformation": "direct",
+      "notes": "Medium confidence match; review before building the map."
+    },
+    {
+      "source_field": "lifetime_value",
+      "target_field": "customer_value",
+      "confidence": 0.421,
+      "transformation": "direct",
+      "notes": "Medium confidence match; review before building the map."
+    },
+    {
+      "source_field": "last_name",
+      "target_field": "family_name",
+      "confidence": 0.417,
+      "transformation": "direct",
+      "notes": "Medium confidence match; review before building the map."
+    },
+    {
+      "source_field": "first_name",
+      "target_field": "given_name",
+      "confidence": 0.403,
+      "transformation": "direct",
+      "notes": "Medium confidence match; review before building the map."
+    },
+    {
+      "source_field": "mobile_number",
+      "target_field": "phone",
+      "confidence": 0.309,
+      "transformation": "direct",
+      "notes": "Medium confidence match; review before building the map."
+    },
+    {
+      "source_field": "total_orders",
+      "target_field": "order_count",
+      "confidence": 0.2,
+      "transformation": "direct",
+      "notes": "Medium confidence match; review before building the map."
+    },
+    {
+      "source_field": "cust_id",
+      "target_field": "external_customer_id",
+      "confidence": 0.16,
+      "transformation": "direct",
+      "notes": "Medium confidence match; review before building the map."
+    },
+    {
+      "source_field": "loyalty_tier",
+      "target_field": "segment",
+      "confidence": 0.15,
+      "transformation": "direct",
+      "notes": "Medium confidence match; review before building the map."
+    }
+  ],
+  "validation_summary": [
+    {
+      "severity": "high",
+      "code": "REQ_FIELD_MISSING",
+      "message": "Required target field 'external_customer_id' does not have a confident mapping.",
+      "recommendation": "Add a direct mapping or a default value before deployment."
+    },
+    {
+      "severity": "medium",
+      "code": "LOW_MAPPING_CONFIDENCE",
+      "message": "6 field mappings have low confidence.",
+      "recommendation": "Review low-confidence fields and rename source fields where possible."
+    }
+  ]
+}

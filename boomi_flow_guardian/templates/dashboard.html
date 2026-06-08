@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boomi Flow Guardian</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Mithilesh ML Portfolio</p>
+        <h1>Boomi Flow Guardian</h1>
+        <p class="sub">Integration planning dashboard for schema mapping, validation, risk scoring, and run estimates.</p>
+      </div>
+      <form method="post" class="control-card">
+        <label>System<input name="system" value="{{ plan.flow_settings.system }}"></label>
+        <label>Records per day<input type="number" name="volume_per_day" value="{{ plan.flow_settings.volume_per_day }}"></label>
+        <label>Schedule minutes<input type="number" name="schedule_minutes" value="{{ plan.flow_settings.schedule_minutes }}"></label>
+        <label>Retries<input type="number" name="retry_count" value="{{ plan.flow_settings.retry_count }}"></label>
+        <label class="check"><input type="checkbox" name="has_dead_letter" {% if plan.flow_settings.has_dead_letter %}checked{% endif %}> Failed record holding</label>
+        <label class="check"><input type="checkbox" name="encryption_enabled" {% if plan.flow_settings.encryption_enabled %}checked{% endif %}> Encryption enabled</label>
+        <button type="submit">Recalculate Plan</button>
+      </form>
+    </section>
+
+    <section class="metrics">
+      <div><span>{{ plan.risk_band }}</span><small>Risk band</small></div>
+      <div><span>{{ "%.2f"|format(plan.risk_score) }}</span><small>Risk score</small></div>
+      <div><span>{{ "%.1f"|format(plan.runtime_minutes) }}m</span><small>Runtime estimate</small></div>
+      <div><span>${{ "%.0f"|format(plan.estimated_monthly_cost) }}</span><small>Monthly estimate</small></div>
+    </section>
+
+    <section class="grid">
+      <article class="panel wide">
+        <h2>Suggested Field Map</h2>
+        <table>
+          <thead><tr><th>Source</th><th>Target</th><th>Confidence</th><th>Transform</th><th>Notes</th></tr></thead>
+          <tbody>
+          {% for item in plan.mappings[:12] %}
+            <tr><td>{{ item.source_field }}</td><td>{{ item.target_field }}</td><td>{{ "%.2f"|format(item.confidence) }}</td><td>{{ item.transformation }}</td><td>{{ item.notes }}</td></tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </article>
+
+      <article class="panel">
+        <h2>Validation</h2>
+        {% for issue in plan.validation_issues %}
+          <div class="issue {{ issue.severity }}"><strong>{{ issue.code }}</strong><span>{{ issue.message }}</span><small>{{ issue.recommendation }}</small></div>
+        {% endfor %}
+      </article>
+
+      <article class="panel">
+        <h2>Artifacts</h2>
+        <p>Report: {{ artifacts.report }}</p>
+        <p>Mappings: {{ artifacts.mapping_csv }}</p>
+        <p>Chart: {{ artifacts.chart }}</p>
+      </article>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
+

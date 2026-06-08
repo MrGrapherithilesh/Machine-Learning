@@ -1,0 +1,16 @@
+{
+  "name": "Shop Customer Export",
+  "fields": [
+    {"name": "cust_id", "type": "string", "required": true, "description": "unique customer identifier", "examples": ["C1029", "C1190"]},
+    {"name": "first_name", "type": "string", "required": true, "description": "customer first name", "examples": ["Riya", "Arjun"]},
+    {"name": "last_name", "type": "string", "required": true, "description": "customer last name", "examples": ["Sharma", "Patel"]},
+    {"name": "email_address", "type": "email", "required": true, "description": "primary contact email", "examples": ["riya@example.com"]},
+    {"name": "mobile_number", "type": "string", "required": false, "description": "phone number with country code", "examples": ["+919876543210"]},
+    {"name": "signup_date", "type": "date", "required": false, "description": "date when customer account was created", "examples": ["2025-08-17"]},
+    {"name": "total_orders", "type": "integer", "required": false, "description": "number of orders placed", "examples": ["12"]},
+    {"name": "lifetime_value", "type": "decimal", "required": false, "description": "total spend value", "examples": ["45000.50"]},
+    {"name": "city_name", "type": "string", "required": false, "description": "customer city", "examples": ["Hyderabad"]},
+    {"name": "loyalty_tier", "type": "string", "required": false, "description": "membership tier", "examples": ["Gold"]}
+  ]
+}
+

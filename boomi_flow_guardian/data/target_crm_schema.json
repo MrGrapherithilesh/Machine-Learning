@@ -1,0 +1,16 @@
+{
+  "name": "CRM Contact Upsert",
+  "fields": [
+    {"name": "external_customer_id", "type": "string", "required": true, "description": "external id for contact upsert", "examples": ["C1029"]},
+    {"name": "given_name", "type": "string", "required": true, "description": "first name of contact", "examples": ["Riya"]},
+    {"name": "family_name", "type": "string", "required": true, "description": "last name of contact", "examples": ["Sharma"]},
+    {"name": "email", "type": "email", "required": true, "description": "email address for CRM contact", "examples": ["riya@example.com"]},
+    {"name": "phone", "type": "string", "required": false, "description": "mobile or phone number", "examples": ["+919876543210"]},
+    {"name": "created_on", "type": "date", "required": false, "description": "created date for source account", "examples": ["2025-08-17"]},
+    {"name": "order_count", "type": "integer", "required": false, "description": "orders completed by customer", "examples": ["12"]},
+    {"name": "customer_value", "type": "decimal", "required": false, "description": "lifetime value for customer", "examples": ["45000.50"]},
+    {"name": "city", "type": "string", "required": false, "description": "contact city", "examples": ["Hyderabad"]},
+    {"name": "segment", "type": "string", "required": false, "description": "loyalty or business segment", "examples": ["Gold"]}
+  ]
+}
+

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Salesforce Customer Sync Plan</title>
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">Boomi Flow Guardian</p>
+      <h1>Salesforce Customer Sync Plan</h1>
+      <p>Connector: Salesforce</p>
+      <div class="metrics">
+        <div><span>Low</span><small>Risk band</small></div>
+        <div><span>0.22</span><small>Risk score</small></div>
+        <div><span>15.7m</span><small>Runtime</small></div>
+        <div><span>$255</span><small>Monthly cost</small></div>
+      </div>
+    </section>
+    <section class="grid">
+      <article class="panel"><h2>Top Mappings</h2><table><tr><td>email_address</td><td>email</td><td>0.65</td><td>direct</td></tr><tr><td>city_name</td><td>city</td><td>0.61</td><td>direct</td></tr><tr><td>signup_date</td><td>created_on</td><td>0.45</td><td>direct</td></tr><tr><td>lifetime_value</td><td>customer_value</td><td>0.42</td><td>direct</td></tr><tr><td>last_name</td><td>family_name</td><td>0.42</td><td>direct</td></tr><tr><td>first_name</td><td>given_name</td><td>0.40</td><td>direct</td></tr><tr><td>mobile_number</td><td>phone</td><td>0.31</td><td>direct</td></tr><tr><td>total_orders</td><td>order_count</td><td>0.20</td><td>direct</td></tr><tr><td>cust_id</td><td>external_customer_id</td><td>0.16</td><td>direct</td></tr><tr><td>loyalty_tier</td><td>segment</td><td>0.15</td><td>direct</td></tr></table></article>
+      <article class="panel"><h2>Validation</h2><table><tr><td>high</td><td>REQ_FIELD_MISSING</td><td>Required target field 'external_customer_id' does not have a confident mapping.</td></tr><tr><td>medium</td><td>LOW_MAPPING_CONFIDENCE</td><td>6 field mappings have low confidence.</td></tr></table></article>
+    </section>
+  </main>
+</body>
+</html>

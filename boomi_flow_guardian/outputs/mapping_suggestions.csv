@@ -1,0 +1,11 @@
+source_field,target_field,confidence,transformation,notes
+email_address,email,0.648,direct,Medium confidence match; review before building the map.
+city_name,city,0.61,direct,Medium confidence match; review before building the map.
+signup_date,created_on,0.449,direct,Medium confidence match; review before building the map.
+lifetime_value,customer_value,0.421,direct,Medium confidence match; review before building the map.
+last_name,family_name,0.417,direct,Medium confidence match; review before building the map.
+first_name,given_name,0.403,direct,Medium confidence match; review before building the map.
+mobile_number,phone,0.309,direct,Medium confidence match; review before building the map.
+total_orders,order_count,0.2,direct,Medium confidence match; review before building the map.
+cust_id,external_customer_id,0.16,direct,Medium confidence match; review before building the map.
+loyalty_tier,segment,0.15,direct,Medium confidence match; review before building the map.

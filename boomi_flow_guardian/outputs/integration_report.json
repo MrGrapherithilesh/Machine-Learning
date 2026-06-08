@@ -1,0 +1,124 @@
+{
+  "title": "Salesforce Customer Sync Plan",
+  "connector_name": "Salesforce",
+  "flow_settings": {
+    "system": "salesforce",
+    "volume_per_day": 18000,
+    "schedule_minutes": 15,
+    "retry_count": 3,
+    "has_dead_letter": true,
+    "encryption_enabled": true,
+    "owner": "Mithilesh"
+  },
+  "mappings": [
+    {
+      "source_field": "email_address",
+      "target_field": "email",
+      "confidence": 0.648,
+      "transformation": "direct",
+      "notes": "Medium confidence match; review before building the map."
+    },
+    {
+      "source_field": "city_name",
+      "target_field": "city",
+      "confidence": 0.61,
+      "transformation": "direct",
+      "notes": "Medium confidence match; review before building the map."
+    },
+    {
+      "source_field": "signup_date",
+      "target_field": "created_on",
+      "confidence": 0.449,
+      "transformation": "direct",
+      "notes": "Medium confidence match; review before building the map."
+    },
+    {
+      "source_field": "lifetime_value",
+      "target_field": "customer_value",
+      "confidence": 0.421,
+      "transformation": "direct",
+      "notes": "Medium confidence match; review before building the map."
+    },
+    {
+      "source_field": "last_name",
+      "target_field": "family_name",
+      "confidence": 0.417,
+      "transformation": "direct",
+      "notes": "Medium confidence match; review before building the map."
+    },
+    {
+      "source_field": "first_name",
+      "target_field": "given_name",
+      "confidence": 0.403,
+      "transformation": "direct",
+      "notes": "Medium confidence match; review before building the map."
+    },
+    {
+      "source_field": "mobile_number",
+      "target_field": "phone",
+      "confidence": 0.309,
+      "transformation": "direct",
+      "notes": "Medium confidence match; review before building the map."
+    },
+    {
+      "source_field": "total_orders",
+      "target_field": "order_count",
+      "confidence": 0.2,
+      "transformation": "direct",
+      "notes": "Medium confidence match; review before building the map."
+    },
+    {
+      "source_field": "cust_id",
+      "target_field": "external_customer_id",
+      "confidence": 0.16,
+      "transformation": "direct",
+      "notes": "Medium confidence match; review before building the map."
+    },
+    {
+      "source_field": "loyalty_tier",
+      "target_field": "segment",
+      "confidence": 0.15,
+      "transformation": "direct",
+      "notes": "Medium confidence match; review before building the map."
+    }
+  ],
+  "validation_issues": [
+    {
+      "severity": "high",
+      "code": "REQ_FIELD_MISSING",
+      "message": "Required target field 'external_customer_id' does not have a confident mapping.",
+      "recommendation": "Add a direct mapping or a default value before deployment."
+    },
+    {
+      "severity": "medium",
+      "code": "LOW_MAPPING_CONFIDENCE",
+      "message": "6 field mappings have low confidence.",
+      "recommendation": "Review low-confidence fields and rename source fields where possible."
+    }
+  ],
+  "risk_score": 0.22,
+  "risk_band": "Low",
+  "runtime_minutes": 15.66,
+  "estimated_monthly_cost": 254.6,
+  "summary": {
+    "source_fields": 10,
+    "target_fields": 10,
+    "mapping_count": 10,
+    "validation_issue_count": 2,
+    "model_metrics": {
+      "risk_accuracy": 1.0,
+      "runtime_mae": 7.09,
+      "training_rows": 30
+    },
+    "feature_row": {
+      "volume_per_day": 18000,
+      "field_count": 20,
+      "required_field_count": 4,
+      "connector_complexity": 0.66,
+      "schedule_minutes": 15,
+      "retry_count": 3,
+      "weak_mapping_count": 8,
+      "transformation_count": 0
+    }
+  }
+}
