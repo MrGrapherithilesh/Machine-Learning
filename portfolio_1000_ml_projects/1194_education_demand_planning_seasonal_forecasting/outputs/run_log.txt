@@ -1,0 +1,1 @@
+Education Demand Planning Seasonal Forecaster completed with {"r2_score": 0.9351, "mae": 12.51, "main_score": "93.5%"}

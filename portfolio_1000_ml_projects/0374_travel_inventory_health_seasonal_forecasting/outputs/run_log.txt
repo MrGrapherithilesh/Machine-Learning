@@ -1,0 +1,1 @@
+Travel Inventory Health Seasonal Forecaster completed with {"r2_score": 0.955, "mae": 13.28, "main_score": "95.5%"}

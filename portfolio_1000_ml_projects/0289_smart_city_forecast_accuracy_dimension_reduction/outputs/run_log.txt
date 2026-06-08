@@ -1,0 +1,1 @@
+Smart City Forecast Accuracy Feature Compression Lab completed with {"explained_variance": 0.9388, "components": 3, "main_score": "93.9%"}

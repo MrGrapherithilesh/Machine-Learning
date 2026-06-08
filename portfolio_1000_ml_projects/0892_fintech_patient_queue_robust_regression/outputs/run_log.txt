@@ -1,0 +1,1 @@
+Fintech Patient Queue Robust Regressor completed with {"r2_score": 0.9531, "mae": 26.48, "main_score": "95.3%"}

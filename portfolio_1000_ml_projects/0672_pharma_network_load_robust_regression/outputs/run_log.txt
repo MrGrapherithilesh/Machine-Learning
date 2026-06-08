@@ -1,0 +1,1 @@
+Pharma Network Load Robust Regressor completed with {"r2_score": 0.923, "mae": 31.17, "main_score": "92.3%"}

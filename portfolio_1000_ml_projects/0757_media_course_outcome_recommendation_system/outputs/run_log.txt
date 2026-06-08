@@ -1,0 +1,1 @@
+Media Course Outcome Recommendation System completed with {"similarity": 0.9476, "users": 10, "main_score": "94.8%"}

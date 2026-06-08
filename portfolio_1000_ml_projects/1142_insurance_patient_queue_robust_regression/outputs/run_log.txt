@@ -1,0 +1,1 @@
+Insurance Patient Queue Robust Regressor completed with {"r2_score": 0.9132, "mae": 20.9, "main_score": "91.3%"}

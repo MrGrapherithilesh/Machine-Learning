@@ -1,0 +1,1 @@
+Healthcare Conversion Lift Advanced Classifier completed with {"accuracy": 0.802, "samples": 420, "main_score": "80.2%"}

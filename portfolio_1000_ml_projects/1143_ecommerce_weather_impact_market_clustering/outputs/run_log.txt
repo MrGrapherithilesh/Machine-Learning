@@ -1,0 +1,1 @@
+Ecommerce Weather Impact Segmentation Model completed with {"silhouette_score": 0.625, "segments": 5, "main_score": "0.63"}

@@ -1,0 +1,1 @@
+Ecommerce Quality Inspection Segmentation Model completed with {"silhouette_score": 0.718, "segments": 5, "main_score": "0.72"}

@@ -1,0 +1,1 @@
+Hr Analytics Course Outcome Recommendation System completed with {"similarity": 0.8827, "users": 10, "main_score": "88.3%"}

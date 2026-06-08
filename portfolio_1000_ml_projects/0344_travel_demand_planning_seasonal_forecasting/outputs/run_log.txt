@@ -1,0 +1,1 @@
+Travel Demand Planning Seasonal Forecaster completed with {"r2_score": 0.866, "mae": 23.82, "main_score": "86.6%"}

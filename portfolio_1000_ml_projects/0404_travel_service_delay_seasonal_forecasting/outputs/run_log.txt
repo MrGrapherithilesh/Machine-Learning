@@ -1,0 +1,1 @@
+Travel Service Delay Seasonal Forecaster completed with {"r2_score": 0.8419, "mae": 17.46, "main_score": "84.2%"}

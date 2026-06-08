@@ -1,0 +1,1 @@
+Fintech Capacity Planning Robust Regressor completed with {"r2_score": 0.9227, "mae": 23.04, "main_score": "92.3%"}

@@ -1,0 +1,1 @@
+Education Inventory Health Seasonal Forecaster completed with {"r2_score": 0.8428, "mae": 18.05, "main_score": "84.3%"}

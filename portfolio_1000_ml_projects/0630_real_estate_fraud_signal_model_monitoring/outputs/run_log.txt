@@ -1,0 +1,1 @@
+Real Estate Fraud Signal Model Monitoring Report completed with {"drift_score": 0.0004, "threshold": 0.12, "status": "stable", "main_score": "0.00"}

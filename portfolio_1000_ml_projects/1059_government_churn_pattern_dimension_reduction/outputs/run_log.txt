@@ -1,0 +1,1 @@
+Government Churn Pattern Feature Compression Lab completed with {"explained_variance": 0.9375, "components": 3, "main_score": "93.7%"}

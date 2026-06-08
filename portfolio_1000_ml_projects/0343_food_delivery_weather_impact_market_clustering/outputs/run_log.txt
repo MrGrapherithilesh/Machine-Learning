@@ -1,0 +1,1 @@
+Food Delivery Weather Impact Segmentation Model completed with {"silhouette_score": 0.7768, "segments": 5, "main_score": "0.78"}

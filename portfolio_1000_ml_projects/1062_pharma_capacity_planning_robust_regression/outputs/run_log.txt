@@ -1,0 +1,1 @@
+Pharma Capacity Planning Robust Regressor completed with {"r2_score": 0.9259, "mae": 22.7, "main_score": "92.6%"}

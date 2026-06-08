@@ -1,0 +1,1 @@
+Energy Performance Band Recommendation System completed with {"similarity": 0.9654, "users": 10, "main_score": "96.5%"}

@@ -1,0 +1,1 @@
+Pharma Lead Ranking Robust Regressor completed with {"r2_score": 0.9504, "mae": 23.05, "main_score": "95.0%"}

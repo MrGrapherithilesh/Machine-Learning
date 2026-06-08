@@ -1,0 +1,1 @@
+Smart City Sensor Health Feature Compression Lab completed with {"explained_variance": 0.8944, "components": 3, "main_score": "89.4%"}

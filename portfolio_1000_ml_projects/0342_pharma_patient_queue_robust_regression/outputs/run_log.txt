@@ -1,0 +1,1 @@
+Pharma Patient Queue Robust Regressor completed with {"r2_score": 0.9378, "mae": 28.6, "main_score": "93.8%"}

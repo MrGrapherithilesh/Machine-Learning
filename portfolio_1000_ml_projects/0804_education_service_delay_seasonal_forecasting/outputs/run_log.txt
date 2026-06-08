@@ -1,0 +1,1 @@
+Education Service Delay Seasonal Forecaster completed with {"r2_score": 0.8978, "mae": 21.1, "main_score": "89.8%"}

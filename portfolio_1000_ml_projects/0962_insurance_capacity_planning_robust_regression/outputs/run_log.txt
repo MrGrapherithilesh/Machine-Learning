@@ -1,0 +1,1 @@
+Insurance Capacity Planning Robust Regressor completed with {"r2_score": 0.8492, "mae": 19.97, "main_score": "84.9%"}

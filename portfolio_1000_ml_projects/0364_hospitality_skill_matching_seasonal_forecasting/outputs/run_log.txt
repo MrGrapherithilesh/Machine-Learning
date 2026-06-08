@@ -1,0 +1,1 @@
+Hospitality Skill Matching Seasonal Forecaster completed with {"r2_score": 0.9223, "mae": 13.59, "main_score": "92.2%"}

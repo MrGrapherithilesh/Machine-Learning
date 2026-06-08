@@ -1,0 +1,1 @@
+Supply Chain Housing Value Model Monitoring Report completed with {"drift_score": 0.2175, "threshold": 0.12, "status": "attention_needed", "main_score": "0.22"}

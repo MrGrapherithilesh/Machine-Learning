@@ -1,0 +1,1 @@
+Environment Fraud Signal Model Monitoring Report completed with {"drift_score": 0.1008, "threshold": 0.12, "status": "stable", "main_score": "0.10"}

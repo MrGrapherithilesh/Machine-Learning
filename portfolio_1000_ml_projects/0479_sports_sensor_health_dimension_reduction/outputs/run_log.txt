@@ -1,0 +1,1 @@
+Sports Sensor Health Feature Compression Lab completed with {"explained_variance": 0.9373, "components": 3, "main_score": "93.7%"}

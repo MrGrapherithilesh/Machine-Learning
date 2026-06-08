@@ -1,0 +1,1 @@
+Environment Housing Value Model Monitoring Report completed with {"drift_score": 0.1122, "threshold": 0.12, "status": "stable", "main_score": "0.11"}

@@ -1,0 +1,1 @@
+Hospitality Service Delay Seasonal Forecaster completed with {"r2_score": 0.7778, "mae": 25.18, "main_score": "77.8%"}

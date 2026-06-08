@@ -1,0 +1,1 @@
+Smart City Claim Severity Feature Compression Lab completed with {"explained_variance": 0.8982, "components": 3, "main_score": "89.8%"}

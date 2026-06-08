@@ -1,0 +1,4 @@
+document,best_label,score
+doc_a,analysis,0.335
+doc_b,prediction,0.295
+doc_c,operations,0.484

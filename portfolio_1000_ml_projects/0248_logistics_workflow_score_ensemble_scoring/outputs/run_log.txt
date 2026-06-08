@@ -1,0 +1,1 @@
+Logistics Workflow Score Ensemble Scoring Model completed with {"ensemble_accuracy": 0.9352, "models": 3, "main_score": "93.5%"}

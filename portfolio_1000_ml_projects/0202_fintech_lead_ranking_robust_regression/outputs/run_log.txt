@@ -1,0 +1,1 @@
+Fintech Lead Ranking Robust Regressor completed with {"r2_score": 0.9305, "mae": 29.45, "main_score": "93.1%"}

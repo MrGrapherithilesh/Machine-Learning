@@ -1,0 +1,1 @@
+Sports Claim Severity Feature Compression Lab completed with {"explained_variance": 0.8841, "components": 3, "main_score": "88.4%"}

@@ -1,0 +1,1 @@
+Hr Analytics Pattern Mining Recommendation System completed with {"similarity": 0.9683, "users": 10, "main_score": "96.8%"}

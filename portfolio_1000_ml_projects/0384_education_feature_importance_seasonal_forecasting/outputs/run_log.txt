@@ -1,0 +1,1 @@
+Education Feature Importance Seasonal Forecaster completed with {"r2_score": 0.8625, "mae": 18.17, "main_score": "86.2%"}

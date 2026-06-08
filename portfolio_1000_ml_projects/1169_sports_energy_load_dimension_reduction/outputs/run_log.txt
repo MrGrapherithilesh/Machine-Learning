@@ -1,0 +1,1 @@
+Sports Energy Load Feature Compression Lab completed with {"explained_variance": 0.9153, "components": 3, "main_score": "91.5%"}

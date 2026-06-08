@@ -1,0 +1,1 @@
+Insurance Network Load Robust Regressor completed with {"r2_score": 0.9443, "mae": 17.77, "main_score": "94.4%"}

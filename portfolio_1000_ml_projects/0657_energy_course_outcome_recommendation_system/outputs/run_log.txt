@@ -1,0 +1,1 @@
+Energy Course Outcome Recommendation System completed with {"similarity": 0.9049, "users": 10, "main_score": "90.5%"}

@@ -1,0 +1,1 @@
+Government Energy Load Feature Compression Lab completed with {"explained_variance": 0.9412, "components": 3, "main_score": "94.1%"}

@@ -1,0 +1,1 @@
+Education Skill Matching Seasonal Forecaster completed with {"r2_score": 0.8393, "mae": 20.79, "main_score": "83.9%"}

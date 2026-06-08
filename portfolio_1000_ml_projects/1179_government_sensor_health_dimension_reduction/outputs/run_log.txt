@@ -1,0 +1,1 @@
+Government Sensor Health Feature Compression Lab completed with {"explained_variance": 0.8616, "components": 3, "main_score": "86.2%"}

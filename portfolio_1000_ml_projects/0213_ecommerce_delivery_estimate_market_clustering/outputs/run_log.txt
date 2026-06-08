@@ -1,0 +1,1 @@
+Ecommerce Delivery Estimate Segmentation Model completed with {"silhouette_score": 0.7373, "segments": 5, "main_score": "0.74"}

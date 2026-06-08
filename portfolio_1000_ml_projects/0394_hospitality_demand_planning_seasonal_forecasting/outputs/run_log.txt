@@ -1,0 +1,1 @@
+Hospitality Demand Planning Seasonal Forecaster completed with {"r2_score": 0.7209, "mae": 30.9, "main_score": "72.1%"}

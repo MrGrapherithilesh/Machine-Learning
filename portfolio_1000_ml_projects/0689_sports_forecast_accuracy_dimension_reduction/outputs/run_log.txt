@@ -1,0 +1,1 @@
+Sports Forecast Accuracy Feature Compression Lab completed with {"explained_variance": 0.917, "components": 3, "main_score": "91.7%"}

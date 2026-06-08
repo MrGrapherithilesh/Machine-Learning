@@ -1,0 +1,1 @@
+Travel Feature Importance Seasonal Forecaster completed with {"r2_score": 0.7829, "mae": 30.2, "main_score": "78.3%"}

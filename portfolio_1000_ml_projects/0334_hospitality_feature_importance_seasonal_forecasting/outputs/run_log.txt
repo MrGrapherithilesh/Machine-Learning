@@ -1,0 +1,1 @@
+Hospitality Feature Importance Seasonal Forecaster completed with {"r2_score": 0.8072, "mae": 26.23, "main_score": "80.7%"}

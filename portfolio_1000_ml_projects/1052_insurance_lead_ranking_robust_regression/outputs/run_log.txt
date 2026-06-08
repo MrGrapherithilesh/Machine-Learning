@@ -1,0 +1,1 @@
+Insurance Lead Ranking Robust Regressor completed with {"r2_score": 0.9223, "mae": 21.33, "main_score": "92.2%"}

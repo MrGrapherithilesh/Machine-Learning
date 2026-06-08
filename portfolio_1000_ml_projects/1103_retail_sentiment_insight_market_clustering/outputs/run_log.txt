@@ -1,0 +1,1 @@
+Retail Sentiment Insight Segmentation Model completed with {"silhouette_score": 0.6379, "segments": 5, "main_score": "0.64"}

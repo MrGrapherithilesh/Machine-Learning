@@ -230,3 +230,18 @@ cd portfolio_next_100_ml_projects/101_mental_health_check_classification
 python main.py
 pytest tests
 ```
+
+### 16. 1000 Medium To Advanced Python ML Projects
+
+A large organized collection of Python ML projects numbered 201-1200, covering classification, regression, clustering, forecasting, semantic NLP, anomaly detection, recommendation systems, ensemble scoring, dimensionality reduction, and model monitoring.
+
+- Code: `portfolio_1000_ml_projects/`
+- Index: `portfolio_1000_ml_projects/README.md`
+- Each project includes code, README, test, metrics output, chart screenshot, and HTML preview.
+- Run one project:
+
+```bash
+cd portfolio_1000_ml_projects/0201_healthcare_risk_scoring_advanced_classification
+python main.py
+pytest tests
+```

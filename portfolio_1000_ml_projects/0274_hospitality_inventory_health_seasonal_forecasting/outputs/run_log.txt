@@ -1,0 +1,1 @@
+Hospitality Inventory Health Seasonal Forecaster completed with {"r2_score": 0.8501, "mae": 18.47, "main_score": "85.0%"}

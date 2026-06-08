@@ -1,0 +1,1 @@
+Travel Skill Matching Seasonal Forecaster completed with {"r2_score": 0.8395, "mae": 24.09, "main_score": "84.0%"}

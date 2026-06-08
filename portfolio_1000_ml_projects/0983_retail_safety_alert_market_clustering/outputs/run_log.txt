@@ -1,0 +1,1 @@
+Retail Safety Alert Segmentation Model completed with {"silhouette_score": 0.6833, "segments": 5, "main_score": "0.68"}

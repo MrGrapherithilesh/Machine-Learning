@@ -1,0 +1,1 @@
+Agriculture Loan Strength Anomaly Detector completed with {"anomaly_rate": 0.0805, "flagged_rows": 28, "main_score": "8.0%"}

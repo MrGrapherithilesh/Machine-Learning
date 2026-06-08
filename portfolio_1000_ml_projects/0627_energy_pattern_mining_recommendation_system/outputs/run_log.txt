@@ -1,0 +1,1 @@
+Energy Pattern Mining Recommendation System completed with {"similarity": 0.9503, "users": 10, "main_score": "95.0%"}
